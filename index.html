@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PAW Veld | Luxury Dog Grooming</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{background:#fff;color:#333;scroll-behavior:smooth;}
+body{scroll-behavior:smooth;background:#fff;color:#333;}
 
 header{
     backdrop-filter:blur(10px);
-    background:rgba(15,47,47,0.9);
+    background:rgba(15,47,47,0.95);
     padding:15px 60px;
     display:flex;
     justify-content:space-between;
@@ -24,7 +24,22 @@ header{
     z-index:1000;
 }
 
-header h1{color:#fff;font-size:24px;font-weight:700;letter-spacing:1px;}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo i{
+    color:#25D366;
+    font-size:28px;
+}
+
+.logo h1{
+    color:#fff;
+    font-size:24px;
+    letter-spacing:1px;
+}
 
 nav a{
     color:#fff;
@@ -63,11 +78,13 @@ nav a:hover{color:#25D366;}
 
 .hero h2{
     font-size:48px;
-    font-weight:700;
     margin-bottom:20px;
 }
 
-.hero p{font-size:20px;margin-bottom:30px;}
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
 
 .btn{
     padding:15px 35px;
@@ -86,7 +103,7 @@ nav a:hover{color:#25D366;}
 
 section{padding:120px 80px;text-align:center;}
 
-h2.section-title{
+.section-title{
     font-size:36px;
     margin-bottom:20px;
     color:#0f2f2f;
@@ -99,12 +116,12 @@ h2.section-title{
     justify-content:center;
     gap:40px;
     flex-wrap:wrap;
-    margin-top:50px;
+    margin-top:40px;
 }
 
 .card{
     background:#fff;
-    padding:40px 30px;
+    padding:40px;
     width:300px;
     border-radius:20px;
     box-shadow:0 20px 40px rgba(0,0,0,0.08);
@@ -119,10 +136,6 @@ h2.section-title{
     color:#25D366;
 }
 
-.gallery{
-    background:#fff;
-}
-
 .gallery-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -132,31 +145,13 @@ h2.section-title{
 
 .gallery-grid img{
     width:100%;
-    border-radius:20px;
     height:300px;
     object-fit:cover;
+    border-radius:20px;
     transition:0.3s;
 }
 
 .gallery-grid img:hover{transform:scale(1.05);}
-
-.testimonials{
-    background:#f7f9f9;
-}
-
-.testimonial-box{
-    max-width:800px;
-    margin:30px auto;
-    background:#fff;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 15px 30px rgba(0,0,0,0.08);
-}
-
-.testimonial-box p{
-    font-style:italic;
-    margin-bottom:15px;
-}
 
 .pricing{
     background:linear-gradient(135deg,#0f2f2f,#164444);
@@ -168,7 +163,7 @@ h2.section-title{
     justify-content:center;
     gap:30px;
     flex-wrap:wrap;
-    margin-top:50px;
+    margin-top:40px;
 }
 
 .price-card{
@@ -180,12 +175,67 @@ h2.section-title{
     box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
-.price-card h3{margin-bottom:10px;}
 .price-card .price{
     font-size:28px;
     font-weight:700;
     margin-bottom:15px;
     color:#25D366;
+}
+
+.reviews{
+    background:#f7f9f9;
+}
+
+.review-form{
+    max-width:600px;
+    margin:30px auto;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+.review-form input,
+.review-form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.stars{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    font-size:28px;
+    margin:15px 0;
+    cursor:pointer;
+}
+
+.stars i{color:#ccc;transition:0.3s;}
+.stars i.active{color:#FFD700;}
+
+.review-btn{
+    background:#25D366;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.review-display{
+    max-width:800px;
+    margin:40px auto 0;
+}
+
+.single-review{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 
 .whatsapp-float{
@@ -215,6 +265,7 @@ footer{
     background:#0f2f2f;
     color:#fff;
     padding:60px 20px;
+    text-align:center;
 }
 
 footer .social-icons a{
@@ -223,7 +274,6 @@ footer .social-icons a{
 }
 
 @media(max-width:768px){
-    header{padding:15px 20px;}
     nav{display:none;}
     section{padding:80px 20px;}
     .hero h2{font-size:32px;}
@@ -234,24 +284,34 @@ footer .social-icons a{
 <body>
 
 <header>
-    <h1>PAW Veld</h1>
+    <div class="logo">
+        <i class="fas fa-paw"></i>
+        <h1>PAW Veld</h1>
+    </div>
+
     <nav>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
     </nav>
+
     <div class="header-social">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20an%20appointment."><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20an%20appointment.">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
 </header>
 
 <section class="hero">
     <div>
         <h2>Luxury Grooming for Your Furry Friend</h2>
-        <p>Professional mobile grooming with love & style</p>
-        <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20an%20appointment." class="btn">Book Appointment on WhatsApp</a>
+        <p>Professional mobile grooming with love & care</p>
+        <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20an%20appointment." class="btn">
+            Book on WhatsApp
+        </a>
     </div>
 </section>
 
@@ -261,7 +321,7 @@ footer .social-icons a{
         <div class="card">
             <i class="fas fa-bath"></i>
             <h3>Bath & Blow Dry</h3>
-            <p>Luxury shampoos & conditioning treatments.</p>
+            <p>Luxury shampoos & coat conditioning.</p>
         </div>
         <div class="card">
             <i class="fas fa-cut"></i>
@@ -276,25 +336,13 @@ footer .social-icons a{
     </div>
 </section>
 
-<section class="gallery" id="gallery">
+<section id="gallery">
     <h2 class="section-title">Happy Clients</h2>
     <div class="gallery-grid">
         <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
         <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1">
         <img src="https://images.unsplash.com/photo-1601758003122-58a3793e0f06">
         <img src="https://images.unsplash.com/photo-1583337130417-3346a1f9e7c8">
-    </div>
-</section>
-
-<section class="testimonials">
-    <h2 class="section-title">What Clients Say</h2>
-    <div class="testimonial-box">
-        <p>"Absolutely amazing service! My dog has never looked better."</p>
-        <strong>- Sarah M.</strong>
-    </div>
-    <div class="testimonial-box">
-        <p>"Professional, friendly and worth every cent."</p>
-        <strong>- David K.</strong>
     </div>
 </section>
 
@@ -319,18 +367,78 @@ footer .social-icons a{
     </div>
 </section>
 
+<section class="reviews" id="reviews">
+    <h2 class="section-title">Leave a Review</h2>
+
+    <div class="review-form">
+        <input type="text" id="name" placeholder="Your Name">
+
+        <div class="stars" id="starRating">
+            <i class="fas fa-star" data-value="1"></i>
+            <i class="fas fa-star" data-value="2"></i>
+            <i class="fas fa-star" data-value="3"></i>
+            <i class="fas fa-star" data-value="4"></i>
+            <i class="fas fa-star" data-value="5"></i>
+        </div>
+
+        <textarea id="comment" rows="4" placeholder="Write your review..."></textarea>
+
+        <button class="review-btn" onclick="submitReview()">Submit Review</button>
+    </div>
+
+    <div class="review-display" id="reviewsContainer"></div>
+</section>
+
 <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20an%20appointment." class="whatsapp-float">
 <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
     <p>© 2026 PAW Veld Doggie Parlour. All Rights Reserved.</p>
-    <div class="social-icons">
-        <a href="#"><i class="fab fa-instagram" style="color:#E4405F;"></i></a>
-        <a href="#"><i class="fab fa-facebook" style="color:#1877F2;"></i></a>
-        <a href="#"><i class="fab fa-whatsapp" style="color:#25D366;"></i></a>
-    </div>
 </footer>
+
+<script>
+let selectedRating = 0;
+const stars = document.querySelectorAll("#starRating i");
+
+stars.forEach(star => {
+    star.addEventListener("click", () => {
+        selectedRating = star.getAttribute("data-value");
+        stars.forEach(s => s.classList.remove("active"));
+        for(let i = 0; i < selectedRating; i++){
+            stars[i].classList.add("active");
+        }
+    });
+});
+
+function submitReview(){
+    const name = document.getElementById("name").value;
+    const comment = document.getElementById("comment").value;
+
+    if(name === "" || comment === "" || selectedRating == 0){
+        alert("Please complete all fields and select a rating.");
+        return;
+    }
+
+    const reviewContainer = document.getElementById("reviewsContainer");
+
+    const reviewDiv = document.createElement("div");
+    reviewDiv.classList.add("single-review");
+
+    reviewDiv.innerHTML = `
+        <h4>${name}</h4>
+        <p>${"⭐".repeat(selectedRating)}</p>
+        <p>${comment}</p>
+    `;
+
+    reviewContainer.prepend(reviewDiv);
+
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+    stars.forEach(s => s.classList.remove("active"));
+    selectedRating = 0;
+}
+</script>
 
 </body>
 </html>
