@@ -9,9 +9,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+/* === Base Styles === */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#fff;color:#333;scroll-behavior:smooth;}
+a{text-decoration:none;}
+section{padding:120px 80px;text-align:center;}
+.section-title{font-size:36px;margin-bottom:30px;color:#0f2f2f;}
 
+/* === Header === */
 header{
 background:rgba(15,47,47,0.95);
 backdrop-filter:blur(8px);
@@ -23,7 +28,6 @@ position:fixed;
 width:100%;
 z-index:1000;
 }
-
 .logo{display:flex;align-items:center;gap:10px;}
 .logo i{color:#25D366;font-size:28px;}
 .logo h1{color:#fff;font-size:24px;}
@@ -31,11 +35,12 @@ z-index:1000;
 nav a{
 color:#fff;
 margin:0 15px;
-text-decoration:none;
+font-weight:600;
 transition:.3s;
 }
 nav a:hover{color:#25D366;}
 
+/* === Hero Section === */
 .hero{
 height:100vh;
 background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
@@ -47,24 +52,19 @@ text-align:center;
 color:#fff;
 padding:20px;
 }
-
 .hero h2{font-size:48px;margin-bottom:20px;}
 .hero p{font-size:20px;margin-bottom:30px;}
-
 .btn{
 background:#25D366;
 color:#fff;
 padding:15px 35px;
 border-radius:50px;
-text-decoration:none;
 font-weight:600;
 transition:.3s;
 }
 .btn:hover{background:#1ebe5b;transform:scale(1.05);}
 
-section{padding:120px 80px;text-align:center;}
-.section-title{font-size:36px;margin-bottom:20px;color:#0f2f2f;}
-
+/* === Services === */
 .services{background:#f7f9f9;}
 .service-box{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:40px;}
 .card{
@@ -74,10 +74,14 @@ width:280px;
 border-radius:20px;
 box-shadow:0 20px 40px rgba(0,0,0,.08);
 transition:.3s;
+position:relative;
+overflow:hidden;
 }
 .card:hover{transform:translateY(-10px);}
-.card i{font-size:40px;color:#25D366;margin-bottom:15px;}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:15px;margin-bottom:15px;}
+.card i{font-size:35px;color:#25D366;margin-bottom:15px;}
 
+/* === Gallery === */
 .gallery-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -93,11 +97,11 @@ transition:.3s;
 }
 .gallery-grid img:hover{transform:scale(1.05);}
 
+/* === Booking Section === */
 .booking{
 background:linear-gradient(135deg,#0f2f2f,#164444);
 color:#fff;
 }
-
 .booking-form{
 max-width:600px;
 margin:40px auto 0;
@@ -108,7 +112,6 @@ border-radius:20px;
 box-shadow:0 20px 40px rgba(0,0,0,.3);
 text-align:left;
 }
-
 .booking-form label{font-weight:600;margin-top:15px;display:block;}
 .booking-form input,
 .booking-form select,
@@ -120,13 +123,7 @@ border-radius:10px;
 border:1px solid #ddd;
 }
 
-.total-price{
-font-size:22px;
-font-weight:700;
-color:#25D366;
-margin:20px 0;
-}
-
+/* === Review Section === */
 .review-section{background:#f7f9f9;}
 .review-form{
 max-width:600px;
@@ -139,7 +136,6 @@ box-shadow:0 15px 30px rgba(0,0,0,.08);
 .stars{display:flex;gap:8px;font-size:28px;margin:15px 0;cursor:pointer;}
 .stars i{color:#ccc;}
 .stars i.active{color:#FFD700;}
-
 .review-display{max-width:800px;margin:20px auto;}
 .single-review{
 background:#fff;
@@ -149,6 +145,7 @@ margin-bottom:15px;
 box-shadow:0 10px 20px rgba(0,0,0,.08);
 }
 
+/* === Social Icons === */
 .social-icons{
 display:flex;
 justify-content:center;
@@ -158,6 +155,7 @@ margin-top:20px;
 .social-icons a{font-size:26px;color:#25D366;transition:.3s;}
 .social-icons a:hover{color:#1ebe5b;}
 
+/* === Floating WhatsApp Button === */
 .whatsapp-float{
 position:fixed;
 bottom:25px;
@@ -180,6 +178,7 @@ animation:pulse 2s infinite;
 100%{transform:scale(1);}
 }
 
+/* === Footer === */
 footer{
 background:#0f2f2f;
 color:#fff;
@@ -207,6 +206,8 @@ section{padding:80px 20px;}
 <a href="#gallery">Gallery</a>
 <a href="#booking">Book</a>
 <a href="#reviews">Reviews</a>
+<a href="#booking" title="Follow us"><i class="fab fa-instagram"></i></a>
+<a href="#booking" title="Follow us"><i class="fab fa-facebook"></i></a>
 </nav>
 </header>
 
@@ -221,10 +222,10 @@ section{padding:80px 20px;}
 <section class="services" id="services">
 <h2 class="section-title">Premium Services</h2>
 <div class="service-box">
-<div class="card"><i class="fas fa-bath"></i><h3>Wash</h3></div>
-<div class="card"><i class="fas fa-cut"></i><h3>Shave</h3></div>
-<div class="card"><i class="fas fa-wind"></i><h3>Blow Wave</h3></div>
-<div class="card"><i class="fas fa-paw"></i><h3>Nail Trim</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1613479546088-9e64ed6cbff7"><h3>Wash</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1620166228855-1922fa6aa6a3"><h3>Shave</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1603398938378-13a36d58e342"><h3>Blow Wave</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1612522085395-fb4bce2aa848"><h3>Nail Trim</h3></div>
 </div>
 </section>
 
@@ -240,7 +241,6 @@ section{padding:80px 20px;}
 
 <section class="booking" id="booking">
 <h2 class="section-title" style="color:white;">Book Appointment</h2>
-
 <div class="booking-form">
 
 <label>Your Name</label>
@@ -279,7 +279,6 @@ section{padding:80px 20px;}
 
 <section class="review-section" id="reviews">
 <h2 class="section-title">Leave a Review</h2>
-
 <div class="review-form">
 <input type="text" id="reviewName" placeholder="Your Name">
 <div class="stars" id="starRating">
@@ -292,7 +291,6 @@ section{padding:80px 20px;}
 <textarea id="reviewComment" rows="4" placeholder="Your Review"></textarea>
 <button class="btn" onclick="submitReview()">Submit Review</button>
 </div>
-
 <div class="review-display" id="reviewsContainer"></div>
 </section>
 
@@ -302,6 +300,11 @@ section{padding:80px 20px;}
 
 <footer>
 <p>© 2026 PAW Veld Doggie Parlour. All Rights Reserved.</p>
+<div class="social-icons">
+<a href="https://www.instagram.com/pawveld_groomers" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/pawveld" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://wa.me/270846888309" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
 </footer>
 
 <script>
@@ -311,12 +314,7 @@ let phone=document.getElementById("custPhone").value;
 let date=document.getElementById("date").value;
 let time=document.getElementById("time").value;
 let pkg=document.getElementById("package").value;
-
-if(!name||!phone||!date||!time||!pkg){
-alert("Please complete all booking details.");
-return;
-}
-
+if(!name||!phone||!date||!time||!pkg){alert("Please complete all booking details.");return;}
 let message=`Hello PAW Veld,%0AName: ${name}%0APhone: ${phone}%0ADate: ${date}%0ATime: ${time}%0APackage: ${pkg}`;
 window.open("https://wa.me/270846888309?text="+message,"_blank");
 }
