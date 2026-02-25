@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paws mobile doggie</title>
+<title>PAW Veld | Luxury Dog Grooming</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -18,11 +18,12 @@
 body{
     background:#fff;
     color:#333;
+    scroll-behavior:smooth;
 }
 
 header{
     background:linear-gradient(135deg,#0f2f2f,#164444);
-    padding:15px 20px;
+    padding:15px 40px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -38,7 +39,7 @@ header h1{
 }
 
 nav a{
-    margin-left:15px;
+    margin-left:20px;
     text-decoration:none;
     color:#fff;
     font-weight:500;
@@ -46,7 +47,19 @@ nav a{
 }
 
 nav a:hover{
-    color:#cceeee;
+    color:#9be7e7;
+}
+
+.header-social a{
+    color:#fff;
+    margin-left:15px;
+    font-size:22px;
+    transition:0.3s;
+}
+
+.header-social a:hover{
+    color:#9be7e7;
+    transform:scale(1.2);
 }
 
 .hero{
@@ -60,9 +73,9 @@ nav a:hover{
 }
 
 .hero h2{
-    font-size:40px;
+    font-size:42px;
     color:#fff;
-    text-shadow:2px 2px 10px rgba(0,0,0,0.6);
+    text-shadow:2px 2px 15px rgba(0,0,0,0.7);
 }
 
 .hero p{
@@ -73,21 +86,23 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
+    margin-top:25px;
+    padding:14px 30px;
     background:#1f5c5c;
     color:#fff;
-    border-radius:30px;
+    border-radius:50px;
     text-decoration:none;
+    font-weight:600;
     transition:0.3s;
 }
 
 .btn:hover{
-    background:#164444;
+    background:#0f2f2f;
+    transform:scale(1.05);
 }
 
 section{
-    padding:80px 20px;
+    padding:100px 20px;
     text-align:center;
 }
 
@@ -99,16 +114,16 @@ section{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:20px;
+    gap:30px;
     margin-top:40px;
 }
 
 .card{
     background:#fff;
-    padding:20px;
-    border-radius:15px;
-    width:250px;
-    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    padding:30px;
+    border-radius:20px;
+    width:260px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
     transition:0.3s;
 }
 
@@ -117,16 +132,21 @@ section{
 }
 
 .card i{
-    font-size:35px;
+    font-size:40px;
     color:#1f5c5c;
     margin-bottom:15px;
 }
 
 .gallery img{
     width:100%;
-    max-width:300px;
-    border-radius:15px;
+    max-width:280px;
+    border-radius:20px;
     margin:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
 }
 
 .pricing{
@@ -137,151 +157,117 @@ section{
 .price-card{
     background:#fff;
     color:#333;
-    padding:20px;
-    border-radius:15px;
-    width:250px;
+    padding:30px;
+    border-radius:20px;
+    width:260px;
     display:inline-block;
     margin:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
 }
 
-footer{
-    background:#0f2f2f;
-    color:#fff;
-    padding:30px 20px;
+.price-card h3{
+    margin-bottom:10px;
 }
 
-.social-icons a{
-    color:#fff;
-    margin:0 10px;
-    font-size:20px;
-    transition:0.3s;
-}
-
-.social-icons a:hover{
-    color:#1f5c5c;
+.price-card p:first-of-type{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:10px;
 }
 
 .whatsapp-float{
     position:fixed;
     bottom:20px;
     right:20px;
-    background:#1f5c5c;
+    background:#25D366;
     color:#fff;
     border-radius:50%;
-    width:60px;
-    height:60px;
+    width:70px;
+    height:70px;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:28px;
+    font-size:32px;
     text-decoration:none;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    box-shadow:0 6px 15px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+footer{
+    background:#0f2f2f;
+    color:#fff;
+    padding:40px 20px;
+}
+
+footer .social-icons a{
+    color:#fff;
+    margin:0 15px;
+    font-size:24px;
+    transition:0.3s;
+}
+
+footer .social-icons a:hover{
+    color:#9be7e7;
 }
 
 @media(max-width:768px){
-    .hero h2{
-        font-size:28px;
-    }
     nav{
         display:none;
     }
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
     <h1>PAW Veld</h1>
+
     <nav>
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
     </nav>
+
+    <div class="header-social">
+        <a href="https://www.instagram.com/pawveld_groomers" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20a%20grooming%20appointment." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 </header>
 
 <div class="hero" id="home">
     <div>
         <h2>Luxury Grooming for Your Furry Friend</h2>
         <p>Professional care with love & style</p>
-        <a href="#contact" class="btn">Book Appointment</a>
+        <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20a%20grooming%20appointment." class="btn" target="_blank">
+            Book on WhatsApp
+        </a>
     </div>
 </div>
 
-<section class="services" id="services">
-    <h2>Our Services</h2>
-    <div class="service-box">
-        <div class="card">
-            <i class="fas fa-bath"></i>
-            <h3>Bath & Blow Dry</h3>
-            <p>Premium shampoos & coat conditioning</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-cut"></i>
-            <h3>Hair Styling</h3>
-            <p>Breed-specific & stylish grooming</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-paw"></i>
-            <h3>Nail Trimming</h3>
-            <p>Safe & comfortable nail care</p>
-        </div>
-    </div>
-</section>
-
-<section class="gallery" id="gallery">
-    <h2>The Team & Happy Furry Friends</h2>
-     <img src="https://www.barkinghoundvillage.com/wp-content/uploads/2024/06/grooming.png">
-    <img src="https://cdn.pixabay.com/photo/2021/12/26/12/11/dog-6895017_1280.jpg">
-    <img src="https://www.petsupermarket.com/on/demandware.static/-/Library-Sites-PetSupermarketLibrary/default/dwfa3a13ab/pages/Services/dog-groom-haircut.png">
-    <img src="https://www.ultimatespetfood.com/wp-content/uploads/grooming-01-1024x565.webp">
-</section>
-
-<section class="pricing" id="pricing">
-    <h2>Pricing Plans</h2>
-    <div class="price-card">
-        <h3>Basic Groom</h3>
-        <p>R200</p>
-        <p>Bath + Nail Trim</p>
-    </div>
-    <div class="price-card">
-        <h3>Premium Groom</h3>
-        <p>R300</p>
-        <p>Full Styling + Bath</p>
-    </div>
-    <div class="price-card">
-        <h3>Luxury Spa</h3>
-        <p>R400</p>
-        <p>Full Groom + Spa Treatment</p>
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Call: +27 0846888309</p>
-    <a href="https://wa.me/270846888309" class="btn">Chat on WhatsApp</a>
-     <div class="social-icons">
-        <a href="https://www.instagram.com/pawveld_groomers?igsh=MTA0cjA2ZnY1NjBjNA==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/share/1LBzTNUGkN/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://wa.me/270846888309" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-</section>
+<a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20a%20grooming%20appointment." 
+class="whatsapp-float" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 <footer>
     <p>© 2026 PAW Veld Doggie Parlour. All Rights Reserved.</p>
     <div class="social-icons">
-        <a href="https://www.instagram.com/pawveld_groomers?igsh=MTA0cjA2ZnY1NjBjNA==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/share/1LBzTNUGkN/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://wa.me/270846888309" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
     </div>
 </footer>
-
-<a href="https://wa.me/270846888309" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
 
 </body>
 </html>
