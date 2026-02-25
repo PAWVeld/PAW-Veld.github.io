@@ -3,193 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PAW Veld | Luxury Mobile Dog Grooming</title>
-
+<title>PAW Veld | Luxury Dog Grooming</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* === Base Styles === */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#fff;color:#333;scroll-behavior:smooth;}
-a{text-decoration:none;}
-section{padding:120px 80px;text-align:center;}
-.section-title{font-size:36px;margin-bottom:30px;color:#0f2f2f;}
 
-/* === Header === */
+body{background:#fff;color:#333;scroll-behavior:smooth;}
+
 header{
-background:rgba(15,47,47,0.95);
-backdrop-filter:blur(8px);
-padding:15px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:fixed;
-width:100%;
-z-index:1000;
+    backdrop-filter:blur(10px);
+    background:rgba(15,47,47,0.9);
+    padding:15px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    z-index:1000;
 }
-.logo{display:flex;align-items:center;gap:10px;}
-.logo i{color:#25D366;font-size:28px;}
-.logo h1{color:#fff;font-size:24px;}
+
+header h1{color:#fff;font-size:24px;font-weight:700;letter-spacing:1px;}
 
 nav a{
-color:#fff;
-margin:0 15px;
-font-weight:600;
-transition:.3s;
+    color:#fff;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
 }
+
 nav a:hover{color:#25D366;}
 
-/* === Hero Section === */
+.header-social a{
+    margin-left:15px;
+    font-size:24px;
+    transition:0.3s;
+}
+
+.header-social .fa-instagram{color:#E4405F;}
+.header-social .fa-facebook{color:#1877F2;}
+.header-social .fa-whatsapp{color:#25D366;}
+
+.header-social a:hover{transform:scale(1.2);}
+
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e') center/cover;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    padding:20px;
 }
-.hero h2{font-size:48px;margin-bottom:20px;}
+
+.hero h2{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
 .hero p{font-size:20px;margin-bottom:30px;}
+
 .btn{
-background:#25D366;
-color:#fff;
-padding:15px 35px;
-border-radius:50px;
-font-weight:600;
-transition:.3s;
+    padding:15px 35px;
+    border-radius:50px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
 }
-.btn:hover{background:#1ebe5b;transform:scale(1.05);}
 
-/* === Services === */
+.btn:hover{
+    background:#1ebe5b;
+    transform:scale(1.05);
+}
+
+section{padding:120px 80px;text-align:center;}
+
+h2.section-title{
+    font-size:36px;
+    margin-bottom:20px;
+    color:#0f2f2f;
+}
+
 .services{background:#f7f9f9;}
-.service-box{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:40px;}
-.card{
-background:#fff;
-padding:40px;
-width:280px;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,.08);
-transition:.3s;
-position:relative;
-overflow:hidden;
-}
-.card:hover{transform:translateY(-10px);}
-.card img{width:100%;height:180px;object-fit:cover;border-radius:15px;margin-bottom:15px;}
-.card i{font-size:35px;color:#25D366;margin-bottom:15px;}
 
-/* === Gallery === */
+.service-box{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+.card{
+    background:#fff;
+    padding:40px 30px;
+    width:300px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{transform:translateY(-10px);}
+
+.card i{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#25D366;
+}
+
+.gallery{
+    background:#fff;
+}
+
 .gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-top:40px;
 }
+
 .gallery-grid img{
-width:100%;
-height:280px;
-object-fit:cover;
-border-radius:20px;
-transition:.3s;
+    width:100%;
+    border-radius:20px;
+    height:300px;
+    object-fit:cover;
+    transition:0.3s;
 }
+
 .gallery-grid img:hover{transform:scale(1.05);}
 
-/* === Booking Section === */
-.booking{
-background:linear-gradient(135deg,#0f2f2f,#164444);
-color:#fff;
-}
-.booking-form{
-max-width:600px;
-margin:40px auto 0;
-background:#fff;
-color:#333;
-padding:40px;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,.3);
-text-align:left;
-}
-.booking-form label{font-weight:600;margin-top:15px;display:block;}
-.booking-form input,
-.booking-form select,
-.booking-form textarea{
-width:100%;
-padding:10px;
-margin-top:5px;
-border-radius:10px;
-border:1px solid #ddd;
+.testimonials{
+    background:#f7f9f9;
 }
 
-/* === Review Section === */
-.review-section{background:#f7f9f9;}
-.review-form{
-max-width:600px;
-margin:40px auto;
-background:#fff;
-padding:40px;
-border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,.08);
-}
-.stars{display:flex;gap:8px;font-size:28px;margin:15px 0;cursor:pointer;}
-.stars i{color:#ccc;}
-.stars i.active{color:#FFD700;}
-.review-display{max-width:800px;margin:20px auto;}
-.single-review{
-background:#fff;
-padding:20px;
-border-radius:15px;
-margin-bottom:15px;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
+.testimonial-box{
+    max-width:800px;
+    margin:30px auto;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.08);
 }
 
-/* === Social Icons === */
-.social-icons{
-display:flex;
-justify-content:center;
-gap:20px;
-margin-top:20px;
+.testimonial-box p{
+    font-style:italic;
+    margin-bottom:15px;
 }
-.social-icons a{font-size:26px;color:#25D366;transition:.3s;}
-.social-icons a:hover{color:#1ebe5b;}
 
-/* === Floating WhatsApp Button === */
+.pricing{
+    background:linear-gradient(135deg,#0f2f2f,#164444);
+    color:#fff;
+}
+
+.price-cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+.price-card{
+    background:#fff;
+    color:#333;
+    padding:40px;
+    width:280px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.price-card h3{margin-bottom:10px;}
+.price-card .price{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:15px;
+    color:#25D366;
+}
+
 .whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-width:70px;
-height:70px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:30px;
-color:#fff;
-box-shadow:0 6px 20px rgba(0,0,0,.3);
-animation:pulse 2s infinite;
-}
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:#fff;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
+    animation:pulse 2s infinite;
 }
 
-/* === Footer === */
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
 footer{
-background:#0f2f2f;
-color:#fff;
-padding:60px 20px;
-text-align:center;
+    background:#0f2f2f;
+    color:#fff;
+    padding:60px 20px;
+}
+
+footer .social-icons a{
+    font-size:26px;
+    margin:0 15px;
 }
 
 @media(max-width:768px){
-nav{display:none;}
-section{padding:80px 20px;}
-.hero h2{font-size:32px;}
+    header{padding:15px 20px;}
+    nav{display:none;}
+    section{padding:80px 20px;}
+    .hero h2{font-size:32px;}
 }
 </style>
 </head>
@@ -197,153 +234,103 @@ section{padding:80px 20px;}
 <body>
 
 <header>
-<div class="logo">
-<i class="fas fa-paw"></i>
-<h1>PAW Veld</h1>
-</div>
-<nav>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#booking">Book</a>
-<a href="#reviews">Reviews</a>
-<a href="#booking" title="Follow us"><i class="fab fa-instagram"></i></a>
-<a href="#booking" title="Follow us"><i class="fab fa-facebook"></i></a>
-</nav>
+    <h1>PAW Veld</h1>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="header-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20an%20appointment."><i class="fab fa-whatsapp"></i></a>
+    </div>
 </header>
 
 <section class="hero">
-<div>
-<h2>Luxury Mobile Dog Grooming</h2>
-<p>Premium care for your furry companion</p>
-<a href="#booking" class="btn">Book Now</a>
-</div>
+    <div>
+        <h2>Luxury Grooming for Your Furry Friend</h2>
+        <p>Professional mobile grooming with love & style</p>
+        <a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20an%20appointment." class="btn">Book Appointment on WhatsApp</a>
+    </div>
 </section>
 
 <section class="services" id="services">
-<h2 class="section-title">Premium Services</h2>
-<div class="service-box">
-<div class="card"><img src="https://images.unsplash.com/photo-1613479546088-9e64ed6cbff7"><h3>Wash</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1620166228855-1922fa6aa6a3"><h3>Shave</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1603398938378-13a36d58e342"><h3>Blow Wave</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1612522085395-fb4bce2aa848"><h3>Nail Trim</h3></div>
-</div>
+    <h2 class="section-title">Premium Services</h2>
+    <div class="service-box">
+        <div class="card">
+            <i class="fas fa-bath"></i>
+            <h3>Bath & Blow Dry</h3>
+            <p>Luxury shampoos & conditioning treatments.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-cut"></i>
+            <h3>Breed Styling</h3>
+            <p>Professional grooming tailored to your dog.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-spa"></i>
+            <h3>Luxury Spa</h3>
+            <p>Relaxing spa treatments & coat nourishment.</p>
+        </div>
+    </div>
 </section>
 
-<section id="gallery">
-<h2 class="section-title">Happy Clients</h2>
-<div class="gallery-grid">
-<img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
-<img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1">
-<img src="https://images.unsplash.com/photo-1601758003122-58a3793e0f06">
-<img src="https://images.unsplash.com/photo-1583337130417-3346a1f9e7c8">
-</div>
+<section class="gallery" id="gallery">
+    <h2 class="section-title">Happy Clients</h2>
+    <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1">
+        <img src="https://images.unsplash.com/photo-1601758003122-58a3793e0f06">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1f9e7c8">
+    </div>
 </section>
 
-<section class="booking" id="booking">
-<h2 class="section-title" style="color:white;">Book Appointment</h2>
-<div class="booking-form">
-
-<label>Your Name</label>
-<input type="text" id="custName">
-
-<label>Phone Number</label>
-<input type="tel" id="custPhone">
-
-<label>Date</label>
-<input type="date" id="date">
-
-<label>Time</label>
-<input type="time" id="time">
-
-<label>Dog Size & Package</label>
-<select id="package">
-<option value="">Select</option>
-<option value="Small - Basic Groom R200">Small - Basic Groom R200</option>
-<option value="Small - Premium Groom R300">Small - Premium Groom R300</option>
-<option value="Small - Luxury Spa R400">Small - Luxury Spa R400</option>
-<option value="Big - Basic Groom R250">Big - Basic Groom R250</option>
-<option value="Big - Premium Groom R350">Big - Premium Groom R350</option>
-<option value="Big - Luxury Spa R500">Big - Luxury Spa R500</option>
-</select>
-
-<button class="btn" onclick="sendBooking()">Confirm Booking</button>
-
-<div class="social-icons">
-<a href="https://www.instagram.com/pawveld_groomers" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/pawveld" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://wa.me/270846888309" target="_blank"><i class="fab fa-whatsapp"></i></a>
-</div>
-
-</div>
+<section class="testimonials">
+    <h2 class="section-title">What Clients Say</h2>
+    <div class="testimonial-box">
+        <p>"Absolutely amazing service! My dog has never looked better."</p>
+        <strong>- Sarah M.</strong>
+    </div>
+    <div class="testimonial-box">
+        <p>"Professional, friendly and worth every cent."</p>
+        <strong>- David K.</strong>
+    </div>
 </section>
 
-<section class="review-section" id="reviews">
-<h2 class="section-title">Leave a Review</h2>
-<div class="review-form">
-<input type="text" id="reviewName" placeholder="Your Name">
-<div class="stars" id="starRating">
-<i class="fas fa-star" data-value="1"></i>
-<i class="fas fa-star" data-value="2"></i>
-<i class="fas fa-star" data-value="3"></i>
-<i class="fas fa-star" data-value="4"></i>
-<i class="fas fa-star" data-value="5"></i>
-</div>
-<textarea id="reviewComment" rows="4" placeholder="Your Review"></textarea>
-<button class="btn" onclick="submitReview()">Submit Review</button>
-</div>
-<div class="review-display" id="reviewsContainer"></div>
+<section class="pricing" id="pricing">
+    <h2 class="section-title" style="color:white;">Pricing Plans</h2>
+    <div class="price-cards">
+        <div class="price-card">
+            <h3>Basic Groom</h3>
+            <div class="price">R200</div>
+            <p>Bath + Nail Trim</p>
+        </div>
+        <div class="price-card">
+            <h3>Premium Groom</h3>
+            <div class="price">R300</div>
+            <p>Full Styling + Bath</p>
+        </div>
+        <div class="price-card">
+            <h3>Luxury Spa</h3>
+            <div class="price">R400</div>
+            <p>Full Groom + Spa Treatment</p>
+        </div>
+    </div>
 </section>
 
-<a href="https://wa.me/270846888309" class="whatsapp-float">
+<a href="https://wa.me/270846888309?text=Hello%20PAW%20Veld,%20I%20would%20like%20to%20book%20an%20appointment." class="whatsapp-float">
 <i class="fab fa-whatsapp"></i>
 </a>
 
 <footer>
-<p>© 2026 PAW Veld Doggie Parlour. All Rights Reserved.</p>
-<div class="social-icons">
-<a href="https://www.instagram.com/pawveld_groomers" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://www.facebook.com/pawveld" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://wa.me/270846888309" target="_blank"><i class="fab fa-whatsapp"></i></a>
-</div>
+    <p>© 2026 PAW Veld Doggie Parlour. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram" style="color:#E4405F;"></i></a>
+        <a href="#"><i class="fab fa-facebook" style="color:#1877F2;"></i></a>
+        <a href="#"><i class="fab fa-whatsapp" style="color:#25D366;"></i></a>
+    </div>
 </footer>
-
-<script>
-function sendBooking(){
-let name=document.getElementById("custName").value;
-let phone=document.getElementById("custPhone").value;
-let date=document.getElementById("date").value;
-let time=document.getElementById("time").value;
-let pkg=document.getElementById("package").value;
-if(!name||!phone||!date||!time||!pkg){alert("Please complete all booking details.");return;}
-let message=`Hello PAW Veld,%0AName: ${name}%0APhone: ${phone}%0ADate: ${date}%0ATime: ${time}%0APackage: ${pkg}`;
-window.open("https://wa.me/270846888309?text="+message,"_blank");
-}
-
-let selectedRating=0;
-const stars=document.querySelectorAll("#starRating i");
-stars.forEach(star=>{
-star.addEventListener("click",()=>{
-selectedRating=star.getAttribute("data-value");
-stars.forEach(s=>s.classList.remove("active"));
-for(let i=0;i<selectedRating;i++){stars[i].classList.add("active");}
-});
-});
-
-function submitReview(){
-let name=document.getElementById("reviewName").value;
-let comment=document.getElementById("reviewComment").value;
-if(!name||!comment||selectedRating==0){alert("Please complete review.");return;}
-let container=document.getElementById("reviewsContainer");
-let div=document.createElement("div");
-div.classList.add("single-review");
-div.innerHTML=`<h4>${name}</h4><p>${"⭐".repeat(selectedRating)}</p><p>${comment}</p>`;
-container.prepend(div);
-document.getElementById("reviewName").value="";
-document.getElementById("reviewComment").value="";
-stars.forEach(s=>s.classList.remove("active"));
-selectedRating=0;
-}
-</script>
 
 </body>
 </html>
